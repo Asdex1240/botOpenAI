@@ -1,16 +1,18 @@
+from modules.questions import openaiQ
+from modules.voz import convertirVoz
 import os
 import openai
+
 openai.api_key = os.getenv("TOKEN")
 
-#Hacer pregunta
-question = input("¿Que quieres preguntar? ")
+op = "Si"
 
-response = openai.Completion.create(
-  model="text-davinci-003",
-  prompt=question,
-  max_tokens=128,
-  temperature=0.5
-)
+def main():
+  respuesta = openaiQ()
+  convertirVoz(respuesta)
+  print(respuesta)
+  os.remove("./media/respuesta.mp3")
 
-#Imprimir el resultado en la consola
-print(response.choices[0].text)
+while op == "Si":
+  main()
+  op = input("¿Quieres seguir? Si/No: ")
