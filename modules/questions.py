@@ -10,4 +10,5 @@ def openaiQ():
         temperature=0.5
     )
     respuesta = response.choices[0].text
+    print(respuesta)
     return respuesta

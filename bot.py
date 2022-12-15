@@ -8,9 +8,7 @@ openai.api_key = os.getenv("TOKEN")
 op = 'Si'
 
 def main():
-    respuesta = openaiQ()
-    convertirVoz(respuesta)
-    print(respuesta)
+    convertirVoz(openaiQ())
     os.remove('./media/respuesta.mp3')
 
 while op == 'Si':
