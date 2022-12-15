@@ -16,3 +16,5 @@ while op == 'Si' or op == 'si' or op == 'Sí' or op == 'sí':
     main()
     convertirVoz('¿Desea realizar otra pregunta?, Responde Si o No')
     op = voice()
+
+convertirVoz('Que tengas un lindo día')
