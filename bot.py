@@ -1,5 +1,6 @@
 from modules.questions import openaiQ
 from modules.voz import convertirVoz
+from modules.reconocimiento import voice
 import os
 import openai
 
@@ -11,6 +12,7 @@ def main():
     convertirVoz(openaiQ())
     os.remove('./media/respuesta.mp3')
 
-while op == 'Si':
+while op == 'Si' or op == 'si' or op == 'Sí' or op == 'sí':
     main()
-    op = input('¿Desea realizar otra pregunta? (Si/No): ')
+    convertirVoz('¿Desea realizar otra pregunta?, Responde Si o No')
+    op = voice()

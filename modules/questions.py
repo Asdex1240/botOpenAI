@@ -1,7 +1,9 @@
 import openai
-
+from modules.reconocimiento import voice
+from modules.voz import convertirVoz
 def openaiQ():
-    question = input("¿Que quieres preguntar? ")
+    convertirVoz("¿Qué quieres preguntar?")
+    question =  voice()
 
     response = openai.Completion.create(
         model="text-davinci-003",

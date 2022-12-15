@@ -1,3 +1,4 @@
 openaibot/
 .vscode/
 modules/__pycache__/
+media/
