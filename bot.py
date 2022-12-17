@@ -1,6 +1,7 @@
 from modules.questions import openaiQ
 from modules.voz import convertirVoz
 from modules.reconocimiento import voice
+from modules.verificarCarpeta import verificarCarpeta
 import os
 import openai
 
@@ -9,6 +10,7 @@ openai.api_key = os.getenv("TOKEN")
 op = 'Si'
 
 def main():
+    verificarCarpeta()
     convertirVoz(openaiQ())
     os.remove('./media/pregunta.wav')
     os.remove('./media/respuesta.mp3')

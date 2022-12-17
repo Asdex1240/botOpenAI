@@ -9,7 +9,7 @@ def openaiQ():
         model="text-davinci-003",
         prompt=question,
         max_tokens=128,
-        temperature=0.5
+        temperature=1
     )
     respuesta = response.choices[0].text
     print(respuesta)
