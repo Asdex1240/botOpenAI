@@ -10,6 +10,7 @@ op = 'Si'
 
 def main():
     convertirVoz(openaiQ())
+    os.remove('./media/pregunta.wav')
     os.remove('./media/respuesta.mp3')
 
 while op == 'Si' or op == 'si' or op == 'Sí' or op == 'sí':
