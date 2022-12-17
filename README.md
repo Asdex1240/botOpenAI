@@ -22,6 +22,7 @@ I preffer that your virtual enviornment will be called 'openaibot'
 
 # Comandos / Commands
 Para instalar entorno virtual / Install virtual environment
+
     python3 -m pip install venv
     pip3 install venv
 
